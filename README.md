@@ -3,6 +3,12 @@
 A full-stack e-commerce store built with **Django REST Framework**, **React** and **PostgreSQL**.
 Customers can browse and search products, manage a shopping bag, and check out; the store owner manages the catalogue and orders through the Django admin.
 
+**🔗 Live demo: [ecommerce-django-react-xi.vercel.app](https://ecommerce-django-react-xi.vercel.app)**
+
+Demo login: username `demo`, password `PalakCart@2026`. Or create your own account.
+
+> The API runs on Render's free tier and sleeps when idle, so the first load can take up to a minute.
+
 ![PalakCart home page](docs/screenshots/home.jpg)
 
 ## Features
@@ -38,6 +44,7 @@ Customers can browse and search products, manage a shopping bag, and check out; 
 | Backend | Python, Django 5.2, Django REST Framework, Simple JWT |
 | Database | PostgreSQL |
 | Other | django-cors-headers, python-dotenv, Pillow |
+| Hosting | Vercel (frontend), Render (API), Neon (PostgreSQL), Cloudinary (images) |
 
 ## Project structure
 
@@ -164,7 +171,7 @@ python manage.py seed_products --clear           # delete ALL categories and pro
 - [ ] Stock management with protection against overselling
 - [ ] Server-side pagination and filtering
 - [ ] Automated tests and GitHub Actions CI
-- [ ] Docker Compose setup and live deployment
+- [ ] Docker Compose setup for local development
 
 ## Author
 
