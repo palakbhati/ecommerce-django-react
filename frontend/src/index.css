@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+
+  --color-cream: #faf8f5;
+  --color-sand: #f1ece4;
+  --color-line: #e7e2da;
+  --color-ink: #1c1917;
+  --color-muted: #78716c;
+  --color-bronze: #8b6f47;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+  }
+  h1, h2, h3, .font-serif {
+    @apply font-serif font-medium tracking-tight;
+    font-variant-numeric: lining-nums;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .eyebrow {
+    @apply text-[11px] font-medium uppercase tracking-[0.2em] text-muted;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-ink px-8 py-3.5 text-xs font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-stone-700 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center border border-ink px-8 py-3.5 text-xs font-medium uppercase tracking-[0.18em] text-ink transition hover:bg-ink hover:text-cream;
+  }
+  .input {
+    @apply w-full border border-line bg-white px-4 py-3 text-sm outline-none transition placeholder:text-stone-400 focus:border-ink;
+  }
+  .link-underline {
+    @apply underline decoration-line underline-offset-4 transition hover:decoration-ink;
+  }
+}
